@@ -6,15 +6,32 @@
 
   <h1>NASA Picture of the Day</h1>
 
-  <!-- SPINNER -->
+  <!-- LOADING SPINNER -->
   <div id="loader" class="spinner"></div>
 
+  <!-- CONTENT -->
   <div id="content" style="display:none;">
+
     <h2><%= data.title %></h2>
-    <img src="<%= data.url %>" width="400">
+
+    <p><strong>Date:</strong> <%= data.date %></p>
+
+    <% if (data.media_type === "image") { %>
+      <img src="<%= data.url %>" width="500">
+    <% } else { %>
+      <!-- If NASA returns a video -->
+      <iframe src="<%= data.url %>" width="500" height="300"></iframe>
+    <% } %>
+
     <p><%= data.explanation %></p>
+
+    <% if (data.copyright) { %>
+      <p><strong>By:</strong> <%= data.copyright %></p>
+    <% } %>
+
   </div>
 
+  <!-- SCRIPT -->
   <script>
     window.onload = () => {
       document.getElementById("loader").style.display = "none";
