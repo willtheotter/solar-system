@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/header.ejs') %>
+
+<body class="fade-in">
+
+  <h1>NASA Picture of the Day</h1>
+
+  <!-- SPINNER -->
+  <div id="loader" class="spinner"></div>
+
+  <div id="content" style="display:none;">
+    <h2><%= data.title %></h2>
+    <img src="<%= data.url %>" width="400">
+    <p><%= data.explanation %></p>
+  </div>
+
+  <script>
+    window.onload = () => {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    };
+  </script>
+
+<%- include('partials/footer.ejs') %>
+</body>
+</html>

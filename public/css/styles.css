@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  color: white;
+  background-color: black;
+}
+
+/* NAV */
+nav {
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+}
+
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+
+/* 🔥 HOVER EFFECT */
+nav a:hover {
+  color: cyan;
+  transform: scale(1.2);
+}
+
+/* REMOVE BULLETS */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PLANET IMAGE HOVER */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* LOADING SPINNER */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid cyan;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

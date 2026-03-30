@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/header.ejs') %>
+
+<body class="fade-in">
+
+  <h1><%= planetName %></h1>
+
+  <img src="<%= planetInfo.image %>" width="300">
+
+  <p><%= planetInfo.description %></p>
+
+  <h3>Details:</h3>
+  <ul>
+    <li>Moons: <%= planetInfo.moons %></li>
+    <li>Radius: <%= planetInfo.radius %></li>
+  </ul>
+
+<%- include('partials/footer.ejs') %>
+</body>
+</html>
